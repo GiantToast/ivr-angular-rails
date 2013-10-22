@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="messages.app">
+<head>
+  <title>SecretMessageSystem</title>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+	<nav class="navbar-inner">
+		<div class="container">
+			<a href="/" class="brand">Intox IVR</a>
+			<ul class="nav">
+				<li><a href="/messages">Messages</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<%= yield %>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-cookies.min.js"></script>
+<%= javascript_include_tag "application" %>
+</body>
+</html>

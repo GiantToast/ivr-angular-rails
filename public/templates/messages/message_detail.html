@@ -1,0 +1,38 @@
+<div class="span12">
+	<h1>Message Details</h1>
+	<div class="row">
+		<span class="span3">CODE:</span>
+		<span class="span9">{{message.id}}</span>
+	</div>
+	<div class="row">
+		<span class="span3">ACTIVE:</span>
+		<span class="span9">{{message.active | uppercase}}</span>
+	</div>
+	<div class="row">
+		<span class="span3">MESSAGE:</span>
+		<span class="span9">{{message.message}}</span>
+	</div>
+	<div class="row">
+		<span class="span3">TOTAL PLAYS:</span>
+		<span class="span9">{{message.message_plays.length}}</span>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<caption><h3>Calls Made for Message:</h3></caption>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Telephone Number</th>
+						<th>Date Played</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="play in message.message_plays">
+						<td>{{play.phonenumber}}</td>
+						<td>{{play.created_at | date:"MMM dd yyyy 'at' hh':'mm a" | uppercase}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

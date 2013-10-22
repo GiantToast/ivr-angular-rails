@@ -1,0 +1,16 @@
+<div class="span12">
+	<div class="well well-large">
+		<h1>Welcome to Intox IVR</h1>
+		<h2>tl;dr</h2>
+		<p>Setup everything, configure Twilio number, click messages at the top.
+		<h2>Setup</h2>
+		<p>To get everything going you'll first need to setup the database.  This was built and tested with Rails 4, Ruby 2.0.0., and Sqlite.  It may work for other versions of Ruby/Rails, but no guarantees. If you are using some other database you'll need to edit database.yml file in the config folder.
+		<p>Step 1: Run bundle from top level directory to pull down all dependencies.
+		<p>Step 2: Run rake db:migrate to setup the test database (assuming sqlLite).
+		<p>Step 3: Start it up by running rails server.
+		<p>Step 4: Use ngrok or something similar to set up a proxy url that tunnels to your localhost.  Twilio needs access to a few available endpoints to work.
+		<p>Step 5: Update the BASE_URL variable in the call_controller.rb file to be the correct url based off your tunelling tool.
+		<p>Step 4: Assuming you already have a Twilio account, configure the 'Voice Request Url' on the number you want to use to point to the base url provided by ngrok or whatever tool you chose plus '/api/handle'.  E.g. https://ngrok.blabla.com/api/handle.  Change the verb to 'GET' and save.
+		<p>Step 6: Click messages on the nav bar and you are good to go.</p> 
+	</div>
+</div>

@@ -1,0 +1,2 @@
+module MessagePlaysHelper
+end

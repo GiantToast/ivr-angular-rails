@@ -1,0 +1,34 @@
+<div class="span12">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Code</th>
+				<th>Active</th>
+				<th>Message</th>
+				<th>Date Created</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="message in messages">
+				<td>{{message.id}}</td>
+				<td>
+					<input type="checkbox" ng-model="message.active" ng-change="updateMessage({{$index}})" />
+				</td>
+				<td>{{message.message}}</td>
+				<td>{{message.created_at | date:"MMM dd yyyy 'at' hh':'mm a" | uppercase}}</td>
+				<td>
+					<a href="/messages/{{message.id}}" class="btn btn-mini btn-success"><i class="icon-white icon-search"></i></a>
+					<a href="/messages/{{message.id}}/edit" class="btn btn-mini btn-primary"><i class="icon-white icon-pencil"></i></a>
+					<a class="btn btn-mini btn-danger" ng-click="deleteMessage(message.id, $index)"><i class="icon-white icon-remove"></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+				<td>
+				<td>
+					<a href="/messages/new" class="btn btn-success">New</a>
+				</td>
+		</tbody>
+	</table>
+</div>

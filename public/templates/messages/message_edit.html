@@ -1,0 +1,17 @@
+<div class="span12">
+	<form>
+		<fieldset>
+			<label for="message">MESSAGE</label>
+			<span class="help-block">Enter your message text here</span>
+			<textarea id="message" rows="5" class="span8" ng-model="message.message">
+				{{message.message}}
+			</textarea>
+
+			<label class="checkbox" for="active">
+				<input id="active" type="checkbox" ng-model="message.active" value="true" /> ACTIVE
+			</label>
+
+			<button class="btn btn-success" ng-click="save()">Save</button>
+		</fieldset>
+	</form>
+</div>
