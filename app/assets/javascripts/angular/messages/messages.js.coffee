@@ -26,7 +26,7 @@ angular.module("messages.controllers")
 		scope.updateMessage = (index) ->
 			postData = scope.messages[index]
 
-			promise = http.put "#{BACKEND}/messages/#{data.id}", postData
+			promise = http.put "#{BACKEND}/messages/#{postData.id}", postData
 			promise.success (data, status, headers, config) ->
 				console.log data
 
