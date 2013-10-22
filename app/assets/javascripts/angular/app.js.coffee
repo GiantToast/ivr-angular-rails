@@ -36,9 +36,9 @@ angular.module("messages.app").config [
 				controller: "EditMessageCtrl"
 			.when "/404",
 				templateUrl: "/404.html"
-			.when "422",
+			.when "/422",
 				templateUrl: "/422.html"			
-			.when "500",
+			.when "/500",
 				templateUrl: "/500.html"			
 			.otherwise
 				redirectTo: "/404"
