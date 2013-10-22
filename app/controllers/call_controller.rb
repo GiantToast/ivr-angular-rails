@@ -19,7 +19,6 @@ class CallController < ApplicationController
 		begin
 			@message = Message.find params['Digits']
 			if @message and @message.active
-				@first_play = false
 				@message_play = MessagePlay.new do |mp|
 					mp.phonenumber = params['Caller']
 					mp.message = @message

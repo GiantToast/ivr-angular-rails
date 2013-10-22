@@ -12,7 +12,6 @@ angular.module("messages.controllers")
 		do ->
 			promise = http.get "#{BACKEND}/messages/#{messageID}"
 			promise.success (data, status, headers, config) ->
-				data
 				scope.message = data
 
 			promise.error (data, status, headers, config) ->

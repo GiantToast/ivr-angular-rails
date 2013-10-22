@@ -7,10 +7,6 @@ SecretMessageSystem::Application.routes.draw do
     # Resource Routes
     resources :messages, :only => [:index, :create, :show, :destroy, :update]
 
-    # Login and Register
-    post 'register' => 'users#register'
-    post 'login' => 'users#login'
-
     # Call Routes
     get 'handle' => 'call#handle_call'
     post 'play' => 'call#play_message'
